@@ -4,13 +4,11 @@ import Math from '../components/Math'
 import { getNum } from '../selectors/math'
 import { getFetchMessage, getFetchIsShow } from '../selectors/fetch'
 import { setNum, add, square } from '../actions/math'
-const mapStateToProps = state => {
-  return {
-    num: getNum(state),
-    fetchMessage: getFetchMessage(state),
-    isShow: getFetchIsShow(state)
-  }
-}
+const mapStateToProps = state => ({
+  num: getNum(state),
+  fetchMessage: getFetchMessage(state),
+  isShow: getFetchIsShow(state)
+})
 const mapDispatchToProps = {
   onSetNumClick: () => setNum(),
   onAddOneClick: () => add(1),
